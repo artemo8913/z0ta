@@ -1,0 +1,62 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-family: 'Montserrat';
+  --secondary-family: 'Roboto';
+
+  --color-gray: #878787;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-dark: #2b2a29;
+  --color-gray-light: #f2f2f2;
+  --color-white-mute: #f1f1f1;
+
+  --color-background: #fffffe;
+  --color-border: var(--color-gray-dark);
+  --color-error: #d60303;
+
+  --color-text: var(--color-gray-dark);
+  --color-text-light: var(--color-white);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  font-size: 16px;
+  min-height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  font-family: var(--primary-family), sans-serif;
+  background-color: var(--color-white-mute);
+}
+
+#app {
+  display: flex;
+  margin: 0 auto;
+}
+
+body .page {
+  background-color: var(--color-background);
+  padding: 42px;
+  border-radius: 2px 0 0 0;
+}
+
+@media only screen and (max-width: 481px) {
+  body {
+    background-color: var(--color-background);
+  }
+
+  body .page {
+    padding: 24px 16px;
+  }
+}
