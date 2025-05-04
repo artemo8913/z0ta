@@ -1,22 +1,24 @@
 ## Запуск проекта
 
+### Установка зависимостей
+
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Запуск в режиме разработки
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Сборка проекта
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Проверка форматирования кода
 
 ```sh
 npm run lint
