@@ -45,18 +45,39 @@ body {
   margin: 0 auto;
 }
 
-body .page {
+#app .page {
   background-color: var(--color-background);
   padding: 42px;
   border-radius: 2px 0 0 0;
 }
 
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%;
+  padding-bottom: 24px;
+  color: var(--color-black);
+}
+
 @media only screen and (max-width: 481px) {
   body {
     background-color: var(--color-background);
+    place-items: start start;
   }
 
-  body .page {
+  #app {
+    margin: 0;
+    width: 100%;
+  }
+
+  #app .page {
+    width: 100%;
     padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 8px;
   }
 }

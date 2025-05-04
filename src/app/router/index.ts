@@ -24,6 +24,8 @@ router.beforeEach((to, _from, next) => {
 
   if (!userStore.user?.login && to.fullPath !== REGISTER_ROUTE.path) {
     next(REGISTER_ROUTE.path)
+  } else if (userStore.user?.login && to.fullPath === REGISTER_ROUTE.path) {
+    next(HOME_ROUTE.path)
   } else {
     next()
   }

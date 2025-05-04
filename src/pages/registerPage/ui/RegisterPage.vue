@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-import { FormInput, FormPasswordInput, FormPhoneInput } from '@/shared/ui/form'
+import { FormInput, FormPasswordInput, FormPhoneInput, FormSubmit } from '@/shared/ui/form'
 import { useUserStore } from '@/entities/user'
 
 interface LoginForm {
@@ -123,8 +123,7 @@ const handleSubmit = (e: Event) => {
         :is-touched="touched.repeatPassword"
         @blur="touched.repeatPassword = true"
       />
-
-      <button type="submit">Зарегистрироваться</button>
+      <FormSubmit>Зарегистрироваться</FormSubmit>
     </form>
     <p class="agreement">
       Нажимая кнопку «Зарегистрироваться», пользователь соглашается с политикой в отношении
@@ -144,29 +143,6 @@ form {
   flex-direction: column;
 }
 
-h1 {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 130%;
-  margin-bottom: 24px;
-  color: var(--color-black);
-}
-
-button {
-  border: none;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 12px;
-  border-radius: 2px;
-  transition: background-color 0.1s linear;
-  color: var(--color-text-light);
-  background-color: var(--color-gray-dark);
-}
-
-button:hover {
-  background-color: var(--color-gray);
-}
-
 .agreement {
   font-size: 14px;
   margin-top: 24px;
@@ -179,12 +155,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 481px) {
-  h1 {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-
   .agreement {
     margin-top: 16px;
     padding-top: 16px;
